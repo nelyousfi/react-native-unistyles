@@ -5,6 +5,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import * as Screens from './examples'
 import { DemoNames, isWeb } from './common'
 import type { DemoStackParams } from './common'
+import { UnistylesRegistry, type UnistylesThemes } from 'react-native-unistyles'
+import { darkTheme, lightTheme } from './styles'
+
+UnistylesRegistry
+    .addThemes({
+        light: lightTheme,
+        dark: darkTheme
+    } as UnistylesThemes)
 
 const Stack = createNativeStackNavigator<DemoStackParams>()
 
@@ -12,7 +20,7 @@ export const App: React.FunctionComponent = () => (
     <SafeAreaProvider>
         <NavigationContainer>
             <Stack.Navigator
-                initialRouteName={DemoNames.Home}
+                initialRouteName={DemoNames.SingleTheme}
                 screenOptions={{
                     headerShown: false
                 }}

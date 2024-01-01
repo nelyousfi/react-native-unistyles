@@ -1,0 +1,4 @@
+- [ ] How the theme is registered?
+- [ ] How this uneInitialTheme works?
+- [ ] How this useStyles works?
+- [ ] How createStyleSheet is forcing the component to re-render?

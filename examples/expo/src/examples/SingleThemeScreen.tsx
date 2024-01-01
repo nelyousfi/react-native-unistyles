@@ -1,9 +1,10 @@
 import React from 'react'
 import { Text, View } from 'react-native'
-import { createStyleSheet, useStyles } from 'react-native-unistyles'
+import { createStyleSheet, useInitialTheme, useStyles } from 'react-native-unistyles'
 import { DemoScreen } from '../components'
 
 export const SingleThemeScreen: React.FunctionComponent = () => {
+    useInitialTheme('light')
     // you can access your theme here
     // if you have one theme it will be auto-selected by Unistyles
     const { styles, theme } = useStyles(stylesheet)
